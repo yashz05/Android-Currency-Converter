@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.UnitConvertor.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.UnitConvertor.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="1">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="From Currency"
+
+                android:textSize="20dp" />
+
+            <Spinner
+                android:id="@+id/basecurrency"
+
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+
+
+                android:backgroundTint="@color/white"
+                android:elevation="40dp"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="To Currency"
+
+                android:textSize="20dp" />
+
+            <Spinner
+                android:id="@+id/tocurrency"
+                android:layout_width="200dp"
+
+                android:layout_height="wrap_content"
+
+                android:background="@android:drawable/btn_dropdown"
+                android:backgroundTint="@color/white"
+                android:elevation="40dp"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/etc"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:hint="Enter Number" />
+
+        <EditText
+            android:id="@+id/result"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:hint="Converted Currency" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/convert"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:elevation="10dp"
+        android:text="Convert" />
+
+</android.widget.LinearLayout>
